@@ -6,7 +6,7 @@ export const Overlay = styled.div`
   height: 100vh;
   z-index: 9;
 
-  background-color: #333c;
+  background-color: #42424250;
 
   display: flex;
   justify-content: center;
@@ -15,16 +15,17 @@ export const Overlay = styled.div`
 
 export const ModalContainer = styled.section`
   min-width: 1000px;
-  min-height: 600px;
+  min-height: 780px;
   max-height: calc(100vh - 20px);
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--wallpaper);
 
   z-index: 19;
 
   overflow-y: auto;
 
-  background-color: var(--dark);
+  //background-color: var(--dark);
   box-shadow: 0px 0px 10px black;
   border-radius: 4px;
 
@@ -52,13 +53,12 @@ export const ModalContainer = styled.section`
   }
 `;
 
-export const GameInfo = styled.form`
+export const GameInformation = styled.div`
   min-width: 300px;
-  width: 450px;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 
 `;
 

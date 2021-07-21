@@ -4,9 +4,11 @@ export const GlobalStyles = createGlobalStyle`
 
     :root{
         --primary: #3f51b5;
+        --secondary: #8795de;
         --buy: #60B120;
-        --lightGray:#C4C4C421;
+        --wallpaper:#f0f1fa;
         --Gray:#262626;
+        --card:#dadae0;
         --light: #FFFFFF;
         --darkGreen: #3F810B;
     }
