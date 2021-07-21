@@ -44,30 +44,24 @@ export const Content = styled.div`
   width: 1280px;
   padding-top: 60px;
 
-  display: flex;
-  flex-direction: column;
-`;
-
-export const CardProducts = styled.div`
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     align-items: center;
     gap: 10px;
-    margin-top: 90px;
+    margin-top: 60px;
+    background-color: honeydew;
 
     overflow-y: auto;
 
-    padding-top: 10px 0px;
-    padding: 50px;
+    margin-left: 15px;
 `;
 
 export const GameCard = styled.article`
-    width: 250px;
+    width: 240px;
     height: 310px;
     background-color: var(--card);
     margin-top: 25px;
     border-radius: 2px;
-    padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
 
     :hover{
@@ -114,17 +108,22 @@ export const GameCard = styled.article`
   }
 `;
 
+export const ProductComponent = styled.div`
+    width: 240px;
+    height: 310px;
+`;
+
 
 
 export const Footer = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 90px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: var(--light);
+    background-color: var(--primary);
 
 `;
 export const ImageAndBuy = styled.div`
@@ -151,7 +150,20 @@ export const ImageAndBuy = styled.div`
         } */
         >div{
             height: 50px;
-            background-color: palevioletred;
+            display: flex;
+            align-items: center;
+
+            >div{
+                width: 120px;
+                height: 40px;
+                padding: 5px;
+                padding-top: 10px;
+                text-align: center;
+                background-color: var(--primary);
+                border-radius: 10px;
+                color: var(--light);
+                margin-left: 15px;
+            }
         }
         >h1{
             font-size: 22px;
@@ -166,6 +178,7 @@ export const ImageAndBuy = styled.div`
 
         }  
     }
+    //QRcode
     >footer{
         height: 200px;
         margin-top: 20px;
@@ -174,13 +187,11 @@ export const ImageAndBuy = styled.div`
         div{
             width: 150px;
             height: 150px;
-            background-color: coral;
             align-self: center;
         }
     }
 
 `;
-
 
 export const GameDescription = styled.div`
     width: 100%;
@@ -239,5 +250,53 @@ export const Available = styled.div`
             }
 
         }
+    }
+`;
+
+export const FinishSale = styled.div`
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+`;
+
+export const Buy = styled.div`
+    height: 40px;
+    text-align: center;
+    background-color: var(--buy);
+    border-radius: 15px;
+    margin-right: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    :hover{
+        cursor: pointer;
+        background-color: #42eb2f;
+        transition: 0.2s;
+    }
+
+`;
+
+export const GiveUp = styled.div`
+    height: 40px;
+    text-align: center;
+    background-color: #D90425cc;
+    border-radius: 15px;
+    margin-left: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    :hover{
+        cursor: pointer;
+        background-color: #85051d;
+        transition: 0.2s;
     }
 `;
