@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Overlay = styled.div`
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 9;
 
   background-color: #42424250;
@@ -11,18 +11,21 @@ export const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 `;
 
 export const ModalContainer = styled.section`
-  min-width: 1000px;
-  min-height: 780px;
-  max-height: calc(100vh - 20px);
+  width: 1050px;
+  height: 600px;
+  //max-height: calc(100vh - 20px);
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--wallpaper);
 
   z-index: 19;
 
+  overflow-x: hidden;
   overflow-y: auto;
 
   //background-color: var(--dark);
@@ -59,7 +62,4 @@ export const GameInformation = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 `;
-
-

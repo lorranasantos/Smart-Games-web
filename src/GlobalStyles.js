@@ -13,6 +13,19 @@ export const GlobalStyles = createGlobalStyle`
         --darkGreen: #3F810B;
     }
 
+    ::-webkit-scrollbar{
+        width:4px;
+        background-color:var(--secondary);
+    }
+    ::-webkit-scrollbar-track{
+        background-color: var(--secondary);
+    }
+    ::-webkit-scrollbar-thumb{
+        border-radius:2px;
+        background-color: var(--primary);
+    }
+
+
     *{
         margin: 0;
         padding: 0;
