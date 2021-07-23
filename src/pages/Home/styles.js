@@ -198,7 +198,7 @@ export const ImageAndBuy = styled.div`
 
 export const GameDescription = styled.div`
   width: 100%;
-  height: 200px;
+  height: 250px;
   border: 1px #000000;
   padding-left: 20px;
   padding-right: 20px;
@@ -221,6 +221,7 @@ export const Available = styled.div`
   border-top: solid 3px var(--primary);
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
 
   > header {
     height: 50px;
@@ -231,72 +232,26 @@ export const Available = styled.div`
     }
   }
   > section {
-    height: 60px;
+    height: 200px;
     display: flex;
-
-    div {
-      width: 220px;
-      height: 45px;
-      background-color: var(--primary);
-      text-align: center;
-      border-radius: 5px;
-      padding-top: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      color: var(--light);
-      margin-left: 10px;
-
-      :hover {
-        cursor: pointer;
-        background-color: var(--secondary);
-        transition: 0.5s;
-      }
-    }
   }
 `;
 
-export const FinishSale = styled.div`
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin-top: 20px;
-
-  font-family: Arial, Helvetica, sans-serif;
-`;
-
-export const Buy = styled.div`
-  height: 40px;
+export const GoogleMapContainer = styled.div`
+  width: 220px;
+  height: 250px;
+  background-color: var(--primary);
   text-align: center;
-  background-color: var(--buy);
-  border-radius: 15px;
-  margin-right: 3px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  :hover {
-    cursor: pointer;
-    background-color: #42eb2f;
-    transition: 0.2s;
-  }
+  border-radius: 5px;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--light);
+  margin-left: 10px;
+  margin-bottom: 50px;
 `;
 
-export const GiveUp = styled.div`
-  height: 40px;
-  text-align: center;
-  background-color: #d90425cc;
-  border-radius: 15px;
-  margin-left: 3px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  :hover {
-    cursor: pointer;
-    background-color: #85051d;
-    transition: 0.2s;
-  }
+export const StoreMap = styled.div`
+  width: 220px;
+  height: 210px;
 `;

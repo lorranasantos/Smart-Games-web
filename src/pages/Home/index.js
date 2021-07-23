@@ -11,20 +11,22 @@ import {
   GameCard,
   GameDescription,
   GiveUp,
+  GoogleMapContainer,
   Header,
   ImageAndBuy,
   Logo,
+  MapContainer,
+  StoreMap,
 } from "./styles";
 import QRcode from "qrcode.react";
-import ModalCompra from "../../components/ModalCompra";
 import api from "../../services/api";
 import logoImg from "../../assets/pacman.png";
+import GoogleMapReact from "google-map-react";
 
 function Home() {
   const [games, setGames] = useState([]);
   const [gameId, setGameId] = useState([]);
   const [showGameInfo, setShowGameInfo] = useState(false);
-  const [showConfirmAquisition, setShowConfirmAquisition] = useState();
 
   const loadGames = async () => {
     const response = await api.get("/game");
@@ -39,23 +41,9 @@ function Home() {
     setShowGameInfo(true);
     setGameId(e);
   };
+
   return (
     <>
-      {showConfirmAquisition && (
-        <ModalCompra
-          title="Deseja finalizar compra?"
-          handleClose={() => setShowConfirmAquisition(false)}
-        >
-          <FinishSale>
-            <Buy onClick={() => setShowConfirmAquisition(false)}>
-              <h2>Sim</h2>
-            </Buy>
-            <GiveUp onClick={() => setShowConfirmAquisition(false)}>
-              <h2>Não</h2>
-            </GiveUp>
-          </FinishSale>
-        </ModalCompra>
-      )}
       {showGameInfo && (
         <Modal title="Detalhes" handleClose={() => setShowGameInfo(false)}>
           <GameInformation>
@@ -68,10 +56,8 @@ function Home() {
                     <div>{plataform.name}</div>
                   ))}
                 </div>
-                <h1>R${gameId.price}</h1>
-                <button onClick={() => setShowConfirmAquisition(true)}>
-                  COMPRAR
-                </button>
+                <h1>R${gameId.price.toFixed(2)}</h1>
+                <button>COMPRAR</button>
               </section>
               <footer>
                 <div>
@@ -94,7 +80,21 @@ function Home() {
               </header>
               <section>
                 {gameId.Stores.map((store) => (
-                  <div>{store.place}</div>
+                  <GoogleMapContainer>
+                    <h1>{store.place}</h1>
+                    <StoreMap>
+                      <GoogleMapReact
+                        bootstrapURLKeys={{
+                          key: "AIzaSyB-JCO3AlnrTLJXtk3_NKQ2r_EU6-6uHxk",
+                        }}
+                        defaultCenter={{
+                          lat: store.latitude,
+                          lng: store.longitude,
+                        }}
+                        defaultZoom={15}
+                      ></GoogleMapReact>
+                    </StoreMap>
+                  </GoogleMapContainer>
                 ))}
               </section>
             </Available>
@@ -116,7 +116,7 @@ function Home() {
               </header>
               <section>
                 <strong>{game.name}</strong>
-                <h1>R${game.price}</h1>
+                <h1>R${game.price.toFixed(2)}</h1>
               </section>
               <footer>
                 <button>COMPRAR</button>
