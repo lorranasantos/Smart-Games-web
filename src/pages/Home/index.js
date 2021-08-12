@@ -105,7 +105,7 @@ function Home() {
         <Header>
           <Logo>
             <img src={logoImg} alt="imagem Logo" />
-            <h1>SMART GAME</h1>
+            <h1>SMART GAMES</h1>
           </Logo>
         </Header>
         <Content>
