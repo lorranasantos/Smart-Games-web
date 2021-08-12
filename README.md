@@ -1,4 +1,4 @@
-# Smart Game Web
+# Smart Games Web
 
 ## Projeto para a loja de jogos Smart Games
 
