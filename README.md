@@ -13,6 +13,6 @@
 
 - Adquirir o Backend dessa aplicação em: https://github.com/lorranasantos/smart-games-back.
 
-- Importar as dependencias com o comando npm install react.
+- Importar as dependencias com o comando npm install.
 
 - Executar a aplicação utilizando o comando npm start.
